@@ -1,0 +1,33 @@
+#+TITLE: CPU Scheduling Simulation (CSS)
+#+AUTHOR: yuu
+#+date: 2020:06:02
+
+
+* Descrição
+  O programa tem 5 opções:
+  1. Criar processo
+     1. Dê o nome do processo;
+     2. Dê o time burst do processo;
+     3. Selecione a fila para o processo;
+     - PIDs ($PID_{0..n}$) são gerados automaticamente por incrementação.
+  2. Mover processo de uma lista para o fim de outra ou da mesma lista
+     1. Selecione o PID do processo desejado;
+     2. Selecione a fila desejada para mover o processo.
+  3. Executar o próximo processo
+     - Processos no início da lista de prioridade são executados primeiro;
+     - Cada execução possui /time quantum/ de ~10~ burst time (BT);
+       - Se processo P passar de 10BT durante qualquer execução,
+         então o P leva /preempt/,
+         e P é realocado na fila de processos não prioritários.
+  4. Imprimir listas
+     - Imprime listas de processos prioritários e não prioritários,
+       bem como as propriedades dos processos:
+       - ~PID~: Process IDentification
+       - ~PRI~: PRIority
+       - ~PRI_O~: Original PRIority
+       - ~AT~: Arrival Time
+       - ~BT~: Burst Time
+       - ~BT_O~: Original Burst Time
+       - ~NAME~: Process' name
+  5. Sair
+     - Termina o programa.
